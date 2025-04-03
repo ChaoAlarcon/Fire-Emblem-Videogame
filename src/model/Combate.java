@@ -25,7 +25,10 @@ public class Combate {
 			enemigoAleatorio = random.nextInt(listaEnemigos.cantidadEnemigos());
 			Enemigo enemigo = listaEnemigos.obtenerEnemigo(enemigoAleatorio);
 			System.out.println("Te enfrentarás contra " + enemigo.getNombre());
-		}
+			System.out.println(ListaEnemigos.mostrarDetallesEnemigos(ListaEnemigos.inicializarEnemigos()));
+		} 
+		
+		
 
 	}
 

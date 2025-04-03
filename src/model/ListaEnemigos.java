@@ -31,7 +31,7 @@ public class ListaEnemigos {
         }
     }
 
-    private void inicializarEnemigos() {
+    public void inicializarEnemigos() {
         enemigos.add(new Enemigo("Goblin", 50, 10, 4, Destreza.Fuerte));
         enemigos.add(new Enemigo("Orco", 30, 8, 2, Destreza.Débil));
         enemigos.add(new Enemigo("Troll", 70, 15, 6, Destreza.Fuerte));
