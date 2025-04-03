@@ -9,7 +9,6 @@ public class Main {
 		estudiante.elegirEstudiante();
 		Combate combate = new Combate();
 		combate.iniciarCombate();
-		//HOla muy buenas
 		
 		
 	}
