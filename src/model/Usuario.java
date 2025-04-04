@@ -57,11 +57,11 @@ public class Usuario {
 	
 	public static void crearListaEnemigos() {
 		ArrayList<Enemigo> enemigos = new ArrayList<Enemigo>();
-		enemigos.add(new Enemigo("Seteth", 30, 8, 2, Destreza.DEBIL));
-		enemigos.add(new Enemigo("Flayn", 50, 10, 4, Destreza.FUERTE));
-		enemigos.add(new Enemigo("Manuela", 30, 8, 2, Destreza.DEBIL));
-		enemigos.add(new Enemigo("Gilbert", 50, 10, 4, Destreza.FUERTE));
-		enemigos.add(new Enemigo("Alois", 30, 8, 2, Destreza.DEBIL));
+		enemigos.add(new Enemigo("Epyon", 30, 8, 2, Destreza.DEBIL));
+		enemigos.add(new Enemigo("Sinanju", 50, 10, 4, Destreza.FUERTE));
+		enemigos.add(new Enemigo("Zaku", 30, 8, 2, Destreza.DEBIL));
+		enemigos.add(new Enemigo("Sazabi", 50, 10, 4, Destreza.FUERTE));
+		enemigos.add(new Enemigo("Z'Gok", 30, 8, 2, Destreza.DEBIL));
 
 		elegirPersonaje(enemigos);
 	}
