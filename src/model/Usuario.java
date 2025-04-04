@@ -8,7 +8,7 @@ public class Usuario {
 	public static void bienvenida() {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Bienvenido a Fire Emblem Three Houses");
-		System.out.println("¿Cuál es tu nombre?:");
+		System.out.println("¿Cómo te llamas?:");
 		String nombreUsuario = sc.nextLine();
 		System.out.println("Seas bienvenido, " + nombreUsuario + ".");
 		crearListaEnemigos();
