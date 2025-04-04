@@ -81,7 +81,7 @@ public class Combate {
 			enemigos.get(enemigoSiguiente).resucitar();
 			combate = true;
 			contadorParaSiguienteRandomEnemigo++;
-			System.out.println("Contador programa: " + contadorParaSiguienteRandomEnemigo); // quitar esto?
+			System.out.println("Número de turnos jugados: " + contadorParaSiguienteRandomEnemigo); // quitar esto?
 		}
 		// FIN COMBATE
 	}
