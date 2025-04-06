@@ -10,25 +10,11 @@ public class Combate {
 		boolean combate = true;
 		boolean guerra = true;
 		int contadorParaSiguienteRandomEnemigo = 0;
-		int enemigoSiguiente = Estudiante.empezarPor(enemigos, seleccionado); // Pulsar tecla ENTER para empezar
+		int enemigoSiguiente = Estudiante.empezarPor(enemigos, seleccionado); 
 		while (guerra) {
 			while (combate) {
 				if (contadorParaSiguienteRandomEnemigo > 0) {
-					enemigoSiguiente = (int) (Math.random() * (enemigos.size() + 0)) + 0; // En un ArrayList de tamaño
-																							// 5, los índices válidos
-																							// son {0, 1, 2, 3, 4}. Como
-																							// Math.random() genera
-																							// valores entre 0.0 y 1.0,
-																							// debemos multiplicarlo por
-																							// size (5) para asegurarnos
-																							// de que los valores
-																							// generados estén dentro
-																							// del rango válido. Si
-																							// sumáramos +1, podríamos
-																							// obtener un número fuera
-																							// del rango (5), lo que
-																							// causaría un error al
-																							// acceder a la lista.
+					enemigoSiguiente = (int) (Math.random() * (enemigos.size() + 0)) + 0;
 					System.out.println("\n\nTU ENEMIGO AHORA ES: " + enemigos.get(enemigoSiguiente).getNombre());
 				}
 				// ATACA ESTUDIANTE
@@ -50,7 +36,7 @@ public class Combate {
 								enemigos.get(enemigoSiguiente).getNombre() + " ha ganado este combate, te ha matado");
 						guerra = false;
 						combate = false;
-						contadorCombate = 4; // para cerrar bucle while (contadorCombate < 4)
+						contadorCombate = 4; 
 					}
 				}
 				// ATACA ENEMIGO
@@ -68,8 +54,8 @@ public class Combate {
 					System.out.println(enemigos.get(enemigoSiguiente).getNombre() + " está muerto.");
 					System.out.println(seleccionado.getNombre() + " ha ganado este combate");
 					seleccionado.combateGanado(enemigos, enemigoSiguiente, seleccionado, vidaEstudiante,
-							ataqueEstudiante, defensaEstudiante, vidaMaxEstudiante); // SEGÚN ENEMIGO ES DE DESTREZA
-																						// DÉBIL O FUERTE
+							ataqueEstudiante, defensaEstudiante, vidaMaxEstudiante); 
+																						
 					Usuario.pulsarEnter();
 					combate = false;
 				}
@@ -81,8 +67,7 @@ public class Combate {
 			enemigos.get(enemigoSiguiente).resucitar();
 			combate = true;
 			contadorParaSiguienteRandomEnemigo++;
-			System.out.println("Número de turnos jugados: " + contadorParaSiguienteRandomEnemigo); // quitar esto?
+			System.out.println("Número de turnos jugados: " + contadorParaSiguienteRandomEnemigo); 
 		}
-		// FIN COMBATE
 	}
 }

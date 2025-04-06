@@ -57,6 +57,7 @@ public class Usuario {
 	
 	public static void crearListaEnemigos() {
 		ArrayList<Enemigo> enemigos = new ArrayList<Enemigo>();
+		//Nombre y parámetros de los enemigos
 		enemigos.add(new Enemigo("Epyon", 30, 8, 2, Destreza.DEBIL));
 		enemigos.add(new Enemigo("Sinanju", 50, 10, 4, Destreza.FUERTE));
 		enemigos.add(new Enemigo("Zaku", 30, 8, 2, Destreza.DEBIL));

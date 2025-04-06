@@ -98,18 +98,15 @@ public class Estudiante {
 
 	public void atacar(Enemigo defensor) {
 		if (defensor.getVida() > 0) {
-			// **1. daño que se va a aplicar:
+			// DAÑO QUE VAS A HACER:
 			int daño = this.ataque - defensor.getDefensa();
 			if (daño <= 0) {
 				System.out.println("El ataque no supera a la defensa de " + defensor.getNombre()
 						+ ", se le restará 1 punto de vida.");
 				daño = 1;
 			}
-			// **2. vida resultante (0 o vida-daño):
+			// VIDA - DAÑO = VIDA RESULTANTE:
 			int vidaResultante = Math.max(0, defensor.getVida() - daño);
-			// Math.max(a, b) devuelve el mayor de los dos valores a y b. Evita valores
-			// negativos en la vida.
-			// **3. impresión de daño y set de vida resultante
 			System.out.println("Daño infligido: " + daño);
 			defensor.setVida(vidaResultante);
 			defensor.imprimirInfo();
@@ -198,9 +195,9 @@ public class Estudiante {
 
 	public static void resultadoFinal(Estudiante seleccionado) {
 		if (seleccionado.getVida() <= 0) {
-			System.out.println("\n\nTU PERSONAJE HA MUERTO, FIN DEL JUEGO");
+			System.out.println("\n\nHAS MUERTO, FIN DEL JUEGO");
 		} else if (seleccionado.getNivel() >= 10) {
-			System.out.println("\n\nTU PERSONAJE HA ALCANZADO EL NIVEL 10, ENHORABUENA");
+			System.out.println("\n\n¡ENHORABUENA, HAS ALCANZADO EL NIVEL 10!");
 		}
 	}
 

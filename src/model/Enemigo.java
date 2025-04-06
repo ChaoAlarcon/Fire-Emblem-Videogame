@@ -71,13 +71,13 @@ public class Enemigo {
 	public static void numeroDeEnemigos(ArrayList<Enemigo> enemigos) {
 		Scanner sc = new Scanner(System.in);
 		int numeroDeEnemigos = 0;
-		System.out.println("\n¿Contra cuántos enemigos quieres entrenar?");
+		System.out.println("\n¿Contra cuántos enemigos quieres luchar?");
 		do {
 			System.out.println("Elige una cifra entre 2 y 5:");
 			numeroDeEnemigos = sc.nextInt();
 		} while (numeroDeEnemigos > 5 || numeroDeEnemigos < 2);
 
-		switch (numeroDeEnemigos) { // eliminamos enemigos
+		switch (numeroDeEnemigos) { 
 		case 2:
 			for (int i = enemigos.size() - 1; i >= 2; i--) {
 				enemigos.remove(i);
@@ -109,18 +109,15 @@ public class Enemigo {
 
 	public void atacar(Estudiante defensor) {
 		if (defensor.getVida() > 0) {
-			// **1. daño que se va a aplicar:
+			// DAÑO QUE VAS A HACER:
 			int daño = this.ataque - defensor.getDefensa();
 			if (daño <= 0) {
 				System.out.println("El ataque no supera a la defensa de " + defensor.getNombre()
 						+ ", se le restará 1 punto de vida.");
 				daño = 1;
 			}
-			// **2. vida resultante (0 o vida-daño):
+			// VIDA - DAÑO = VIDA RESULTANTE:
 			int vidaResultante = Math.max(0, defensor.getVida() - daño);
-			// Math.max(a, b) devuelve el mayor de los dos valores a y b. Evita valores
-			// negativos en la vida.
-			// **3. impresión de daño y set de vida resultante
 			System.out.println("Daño infligido: " + daño);
 			defensor.setVida(vidaResultante);
 			defensor.imprimirInfo();
@@ -130,7 +127,7 @@ public class Enemigo {
 	}
 
 	public void resucitar() {
-		System.out.println("\nEl enemigo ha resucitado porque el combate ya ha terminado y es un pedazo de crack");
+		System.out.println("\n¡El enemigo ha conseguido resucitar!");
 		if (this.destreza == Destreza.DEBIL) {
 			this.vida = 30;
 		} else {
