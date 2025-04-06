@@ -1,9 +1,10 @@
 # Fire-Emblem-Videogame
 <<<<<<< HEAD
-### Aventura conversacional interactiva desarrollada con Java.
+
 =======
 
-### Aventura conversacional interactiva desarrollada con Java.
+### Aventura conversacional interactiva desarrollada con Java por Chao Alarcón.
+
 
 
 
