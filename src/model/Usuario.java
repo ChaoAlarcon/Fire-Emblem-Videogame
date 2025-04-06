@@ -21,7 +21,7 @@ public class Usuario {
 	}
 	
 	public static void elegirPersonaje(ArrayList<Enemigo> enemigos) {
-		// ELIGIENDO ESTUDIANTE
+		// Elegir el Estudiante que vas a ser:
 				int vidaEstudiante = (int) (Math.random() * (20 + 1)) + 40;
 				int ataqueEstudiante = (int) (Math.random() * (5 + 1)) + 7;
 				int defensaEstudiante = (int) (Math.random() * (3 + 1)) + 4;
@@ -49,7 +49,7 @@ public class Usuario {
 					claude.imprimirInfoParcial();
 					seleccionado = claude;
 				}
-				// FIN ELEGIENDO ESTUDIANTE
+				// Fin de elegir estudiante
 				Enemigo.numeroDeEnemigos(enemigos);
 				Combate.combate(enemigos, seleccionado, vidaEstudiante, ataqueEstudiante, defensaEstudiante, vidaMaxEstudiante);
 				Estudiante.resultadoFinal(seleccionado);
